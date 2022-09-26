@@ -7,10 +7,6 @@ PASSWORD_LENGTH = 10
 
 def main():
     get_password()
-    print_password()
-
-
-def print_password():
     print('*' * 10)
 
 
