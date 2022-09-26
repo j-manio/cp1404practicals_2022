@@ -7,7 +7,7 @@ PASSWORD_LENGTH = 10
 
 def main():
     get_password()
-    print('*' * 10)
+    print_password()
 
 
 def get_password():
@@ -15,6 +15,10 @@ def get_password():
     while len(user_password) != PASSWORD_LENGTH:
         print('Does not meet the requirement')
         user_password = input('Password: ')
+
+
+def print_password():
+    print('*' * 10)
 
 
 main()
