@@ -11,6 +11,7 @@ def main():
 
 
 def get_password():
+    """ Will check for password length"""
     user_password = input('Password: ')
     while len(user_password) != PASSWORD_LENGTH:
         print('Does not meet the requirement')
@@ -18,6 +19,7 @@ def get_password():
 
 
 def print_password():
+    """ Will print stars """
     print('*' * 10)
 
 
