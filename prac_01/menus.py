@@ -1,6 +1,6 @@
-'''
+"""
 Menu
-'''
+"""
 
 user_name = str(input('Enter name: '))
 MENU = '''(H)ello
