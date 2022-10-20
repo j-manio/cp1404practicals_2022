@@ -1,5 +1,7 @@
 """
 Wimbledon
+Estimated: 300 Minutes
+Actual 480 Minutes
 """
 
 FILENAME = "wimbledon.csv"
