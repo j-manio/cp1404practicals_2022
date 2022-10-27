@@ -1,4 +1,3 @@
-
 """CP1404/CP5632 Practical - Car class example."""
 
 
@@ -12,6 +11,9 @@ class Car:
         """
         self.fuel = fuel
         self._odometer = 0
+
+    def __str__(self):
+        return f"{Car} has {self.fuel} and has {self._odometer}km"
 
     def add_fuel(self, amount):
         """Add amount to the car's fuel."""
@@ -30,4 +32,3 @@ class Car:
             self.fuel -= distance
         self._odometer += distance
         return distance
-
