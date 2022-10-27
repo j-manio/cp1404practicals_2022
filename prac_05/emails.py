@@ -1,3 +1,10 @@
+"""
+Emails
+Estimate: 180 minutes
+Actual: 300 minutes
+"""
+
+
 def main():
     email_to_name = {}
 
@@ -5,8 +12,8 @@ def main():
     while email != "":
         name = extract_name_to_email(email)
 
-        verification = input(f"Verify your name: {name} Y / N?: ").upper()
-        if verification != "Y" and verification != "":
+        confirmation = input(f"Verify your name: {name} Y / N?: ").upper()
+        if confirmation != "Y" and confirmation != "":
             name = input("Name: ")
         email_to_name[email] = name
         email = input("Email: ")
