@@ -21,5 +21,4 @@ class Guitar:
         return CURRENT_YEAR - self.year
 
     def is_vintage(self):
-        if self.get_age() > VINTAGE_YEAR:
-            return True
+        return self.get_age() >= VINTAGE_YEAR
