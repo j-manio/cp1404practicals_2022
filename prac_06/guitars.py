@@ -15,9 +15,15 @@ def main():
         guitar_name = input("Name: ")
 
     for i, guitar in enumerate(guitars, 1):
-        guitar_age = guitar.get_age()
+        guitar.get_age()
+        vintage_guitar = guitar.is_vintage()
+        if vintage_guitar:
+            vintage_guitar = "Vintage"
+            print(f"Guitar {i}: {guitar.name} ({guitar.year}), worth $ {guitar.cost} ({vintage_guitar})")
+        else:
+            print(f"Guitar {i}: {guitar.name} ({guitar.year}), worth $ {guitar.cost}")
 
-        print(f"Guitar {i}: {guitar.name} ({guitar.year}), worth $ {guitar.cost} ({guitar_age})")
+
 
 
 main()
