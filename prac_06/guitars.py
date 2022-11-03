@@ -18,11 +18,11 @@ def main():
         guitar.get_age()
         vintage_guitar = guitar.is_vintage()
         if vintage_guitar:
-            vintage_guitar = "Vintage"
-            print(f"Guitar {i}: {guitar.name} ({guitar.year}), worth $ {guitar.cost} ({vintage_guitar})")
+            vintage_guitar = "(Vintage)"
         else:
-            print(f"Guitar {i}: {guitar.name} ({guitar.year}), worth $ {guitar.cost}")
+            vintage_guitar = " "
 
+        print(f"Guitar {i}: {guitar.name:>20} ({guitar.year}), worth $ {guitar.cost:.2f} {vintage_guitar}")
 
 
 
