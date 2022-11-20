@@ -1,0 +1,19 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'vertical'
+        # this layout is populated with Button widgets in app code
+        id: main
+    Label:
+        size_hint_y: 0.1
+        text: app.status_text
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: 0.2
+        Button:
+            text: "Create Labels"
+            on_release: app.create_widgets()
+        Button:
+            text: "Clear Labels"
+            on_release: app.clear_all()
+
