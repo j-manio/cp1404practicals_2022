@@ -21,7 +21,14 @@ def main():
     menu_choice = input(">>> ").lower()
     while menu_choice != "q":
         if menu_choice == "c":
-            pass
+            print("Taxis available: ")
+
+            # no error-checking
+            taxi_choice = int(input("Choose taxi: "))
+            try:
+                current_taxi = taxis[taxi_choice]
+            except IndexError:
+                print("Invalid taxi choice")
         elif menu_choice == "d":
             pass
         else:
