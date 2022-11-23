@@ -7,14 +7,14 @@ from prac_09.car import Car
 from prac_09.taxi import Taxi
 from prac_09.silver_sevice_taxi import SilverServiceTaxi
 
-
 MENU = """q)uit, c)hoose, d)rive
 """
 
 
 def main():
     total_bill = 0
-    taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4,)]
+    taxis = [Taxi("Prius", 100, 1.23), SilverServiceTaxi("Limo", 100, 2.46, 4.50),
+             SilverServiceTaxi("Hummer", 200, 4, 4.50 )]
     current_taxi = ""
     print("Let's drive!")
     print(MENU)
@@ -22,7 +22,7 @@ def main():
     while menu_choice != "q":
         if menu_choice == "c":
             print("Taxis available: ")
-
+            display_taxis(taxis)
             # no error-checking
             taxi_choice = int(input("Choose taxi: "))
             try:
@@ -46,11 +46,9 @@ def main():
         menu_choice = input(">>> ").lower()
 
 
-
-
-
-
+def display_taxis(taxis):
+    for i, taxi in enumerate(taxis):
+        print(f"{i} - {taxi}")
 
 
 main()
-
